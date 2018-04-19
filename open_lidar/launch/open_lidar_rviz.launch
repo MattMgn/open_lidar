@@ -1,0 +1,14 @@
+<launch>
+
+  <node pkg="rosserial_python" type="serial_node.py" name="open_lidar_core" output="screen">
+    <param name="port" value="/dev/ttyACM0"/>
+    <param name="baud" value="115200"/>
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher" name="transform" output="screen" args="0 0 0 0 0 0 base_robot base_scan 100" />
+
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find open_lidar)/rviz/open_lidar.rviz"/>
+
+
+</launch>
