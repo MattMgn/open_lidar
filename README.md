@@ -1,8 +1,6 @@
 # open_lidar
 Open Source 360° 2D lidar project based on Atmel ARM Cortex-M3
 
-Currently no code published about microcontroller 
-
 ### available
 * ```open_lidar_rviz.launch```
   display laserscan in Rviz 
